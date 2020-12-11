@@ -35,8 +35,10 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^9",
+    "postcss": "^7",
     "postcss-import": "^13.0.0",
-    "tailwindcss": "^2.0.1"
+    "postcss-loader": "^4.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
