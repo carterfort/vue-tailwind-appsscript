@@ -2,7 +2,7 @@
     <div class="container pt-3">
         This is the main application container.
         <br/>
-        Does it update?
+        Are we still good here?
     </div>
 </template>
 
