@@ -24,10 +24,17 @@ export default {
     },
     methods : {
         postNewMessage(){
+            if (! this.newTitle){
+                return;
+            }
+
             let msg = {title : this.newTitle, message: this.newMessage}
             this.newTitle = '';
             this.newMessage = '';
             this.$emit('new-message', msg);
+            this.$appScript.someAppLibraryFunctionThatWillRunInAppsScript().then( res => {
+                console.log(res);
+            });
         }
     }
 }
