@@ -4,6 +4,7 @@ const common = require('./webpack.common.js');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 
 module.exports = merge(common, {
@@ -11,6 +12,15 @@ module.exports = merge(common, {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, '../deploy/gas')
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true
+            })
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
