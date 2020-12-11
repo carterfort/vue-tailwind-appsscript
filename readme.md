@@ -23,6 +23,16 @@ It uses live reload, so as you make and save changes they will update automatica
 
 > { "scriptId" : "SCRIPT_ID_FROM_SCRIPT_URL" }
 
+If you don't have `clasp` installed, you can install it globally:
+
+`npm install @google/clasp -g`
+
+You'll need to log in to `clasp` once it's installed. `clasp login`
+
+Also, if you haven't already, you'll need to enable the [Apps Script API](https://script.google.com/home/usersettings)
+
+After the initial file push, you'll need to manually deploy the app to web. This is under the "Publish" menu in your script editor.
+
 ## Testing the Back End
 
 Because you're going to be using Apps Script as your back-end, you're going to want a way to test out the functionality that you're buidling up. I recommend creating a new apps script app where you write out the acutal functions that will run, then copy those functions to your the `server/src/lib` file. Don't forget to export all of your functions at the bottom!
