@@ -1,6 +1,8 @@
 <template>
-    <div>
-        This is the main application container
+    <div class="container pt-3">
+        This is the main application container.
+        <br/>
+        Does it update?
     </div>
 </template>
 
