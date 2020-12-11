@@ -26,7 +26,7 @@ It uses live reload, so as you make and save changes they will update automatica
 
 ## Deploy
 
-1. Go to `script.google.com` to find your Script ID (create a new one or get an existing one)
+1. Go to `script.google.com` to find your Script ID (the "container" script I mentioned earlier)
     1. The script ID is the long string in the URL when you've opened the editor
     2. `https://script.google.com/d/{SCRIPT_ID}/edit`
 1. Create a `.clasp.json` file in the base directory with the following contents:
