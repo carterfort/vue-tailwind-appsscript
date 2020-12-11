@@ -8,6 +8,16 @@ Build up a front-end that you can deploy to a Google Apps Script app. Use Sheets
 1. Install clasp
 1. Install dependencies with `yarn`
 
+Once you've installed locally, you'll need to do a little bit of administrivia before you can push your code to Apps Script.
+
+I like to create an empty Apps Script script that will serve as the "container" for the app. The ID for this script will go in your `.clasp.json` file (explained more later) and is where all of your code will be pushed. This is the script that you will ultimately publish and deploy as a web app.
+
+For development purposes, I also like to create a second "playground" script. I use this as a place to test out my Apps Script code in real-time, which I then copy/paste into my `./server/src/lib.js` file. Don't forget to export all of the method names that your Backend service will need in three places:
+
+* `./server/src/api.js`
+* `./client/src/GASBackend.js`
+* `./client/src/MockBackend.js`
+
 ## Local Development
 
 `yarn local` will boot up a webpack server at `localhost:9090`. I've set the default to open Firefox, so you might want to change that to Chrome (or remove the string entirely to use your default browser)
@@ -23,7 +33,7 @@ It uses live reload, so as you make and save changes they will update automatica
 
 > { "scriptId" : "SCRIPT_ID_FROM_SCRIPT_URL" }
 
-If you don't have `clasp` installed, you can install it globally:
+If you don't have [`clasp`](https://developers.google.com/apps-script/guides/clasp) installed, you can install it globally:
 
 `npm install @google/clasp -g`
 
