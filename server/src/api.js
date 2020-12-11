@@ -5,6 +5,6 @@ function doGet() {
 
 }
 
-function someAppLibraryFunctionThatWillRunInAppsScript() {
-    return AppLib.someAppLibraryFunctionThatWillRunInAppsScript();
+function saveMessage(msgObj) {
+    return AppLib.saveMessage(msgObj);
 }

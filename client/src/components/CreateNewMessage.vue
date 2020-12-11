@@ -32,9 +32,7 @@ export default {
             this.newTitle = '';
             this.newMessage = '';
             this.$emit('new-message', msg);
-            this.$appScript.someAppLibraryFunctionThatWillRunInAppsScript().then( res => {
-                console.log(res);
-            });
+            this.$appScript.saveMessage(msg);
         }
     }
 }

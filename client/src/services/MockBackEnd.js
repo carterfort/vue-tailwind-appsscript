@@ -1,9 +1,7 @@
-'use strict';
-
 class MockBackEnd {
-    
-    someAppLibraryFunctionThatWillRunInAppsScript() {
-        return this.later("Whoa hey c'mon now");
+
+    saveMessage() {
+       return this.later('message sent');
     }
 
     later(value) {
