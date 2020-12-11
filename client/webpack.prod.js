@@ -13,15 +13,6 @@ module.exports = merge(common, {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, '../deploy/gas')
     },
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true
-            })
-        ]
-    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'client/src/index.html',
