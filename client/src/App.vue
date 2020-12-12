@@ -26,16 +26,13 @@ export default {
     },
     data(){
         return {
-            messages : [
-                {
-                    "title" : "ChitChat",
-                    "message" : "Tailwind has started working!"
-                }
-            ]
+            messages : []
         }
     },
     mounted(){
-
+        this.$appScript.readMessages().then( messages => {
+            this.messages = messages
+        })
     },
     methods : {
         

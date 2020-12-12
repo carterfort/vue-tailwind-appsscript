@@ -7,7 +7,17 @@ function saveMessage(msgObj) {
     sheet.appendRow([msgObj.title, msgObj.message]);
 }
 
-export {
+function readMessages() {
+    let sheet = SpreadsheetApp.openById(messageSheetId).getActiveSheet();
+    let messagesCount = sheet.getMaxRows() - 1;
 
-    saveMessage
+    return sheet.getRange(2, 1, messagesCount, 2).getValues().map((row) => {
+        return { title: row[0], message: row[1] }
+    });
+
+}
+
+export {
+    saveMessage,
+    readMessages
 }; 

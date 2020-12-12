@@ -1,5 +1,16 @@
 class MockBackEnd {
 
+    readMessages() {
+
+        let messageArray = [
+            ["Loaded Up!", "Pulled in from server"]
+        ].map( (row) => {
+            return {title : row[0], message : row[1]}
+        })
+
+        return this.later(messageArray);
+    }
+
     saveMessage() {
        return this.later('message sent');
     }
