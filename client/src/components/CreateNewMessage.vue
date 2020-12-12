@@ -28,11 +28,15 @@ export default {
                 return;
             }
 
+            window.Events.$emit('displayMessage', "Posting message...");
+
             let msg = {title : this.newTitle, message: this.newMessage}
             this.newTitle = '';
             this.newMessage = '';
             this.$emit('new-message', msg);
-            this.$appScript.saveMessage(msg);
+            this.$appScript.saveMessage(msg).then( () => {
+                window.Events.$emit('dismissMessage');
+            });
         }
     }
 }
