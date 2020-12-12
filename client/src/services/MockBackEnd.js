@@ -19,7 +19,7 @@ class MockBackEnd {
         return new Promise(function (resolve) {
             setTimeout(function () {
                 resolve(value);
-            }, 500);
+            }, 1500);
         });
     }
 };
