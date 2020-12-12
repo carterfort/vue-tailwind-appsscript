@@ -17,6 +17,7 @@ function readMessages() {
 
 }
 
+// Don't include the export statement in your Apps Script playground --
 export {
     saveMessage,
     readMessages
