@@ -35,7 +35,9 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "autoprefixer": "^9",
+    "core-js": "^3.8.1",
     "postcss": "^7",
     "postcss-import": "^13.0.0",
     "postcss-loader": "^4.1.0",
