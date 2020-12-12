@@ -30,8 +30,12 @@ export default {
         }
     },
     mounted(){
+
+        window.Events.$emit('displayMessage', "Fetching messages...");
+
         this.$appScript.readMessages().then( messages => {
             this.messages = messages
+            window.Events.$emit('dismissMessage');
         })
     },
     methods : {
