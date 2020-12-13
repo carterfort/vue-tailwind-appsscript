@@ -39,8 +39,9 @@
     "autoprefixer": "^9",
     "core-js": "^3.8.1",
     "postcss": "^7",
-    "postcss-import": "^13.0.0",
+    "postcss-import": "^11.1.0",
     "postcss-loader": "^4.1.0",
+    "purgecss-webpack-plugin": "^3.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "uglifyjs-webpack-plugin": "^2.2.0"
   }
