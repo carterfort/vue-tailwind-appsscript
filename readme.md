@@ -20,7 +20,7 @@ For development purposes, I also like to create a second "playground" script. I 
 
 ## Local Development
 
-`yarn local` will boot up a webpack server at `localhost:9090`. I've set the default to open Firefox, so you might want to change that to Chrome (or remove the string entirely to use your default browser)
+`yarn local` will boot up a webpack server at `localhost:9090`. I've set the default to open Firefox, so you might want to change that to Chrome (or remove the --open argument entirely from the `package.json` file to use your default browser)
 
 It uses live reload, so as you make and save changes they will update automatically
 
